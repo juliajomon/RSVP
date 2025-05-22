@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Wedding Website</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Page 1: Landscape with Navigation -->
+  <section id="landscape" class="page">
+    <nav class="navbar">
+      <ul>
+        <li><a href="#bride">Bride</a></li>
+        <li><a href="#groom">Groom</a></li>
+        <li><a href="#rsvp">RSVP</a></li>
+      </ul>
+    </nav>
+    <div class="landscape-container">
+      <img src="images/landscape.png" alt="Bride and Groom Landscape" />
+    </div>
+  </section>
+
+  <!-- Page 2: Bride -->
+  <section id="bride" class="page bride-groom-section">
+    <div class="bride-pic">
+      <img src="images/bride.png" alt="Bride" />
+    </div>
+    <div class="bride-details">
+      <h2>Bride</h2>
+      <p>Jane Doe</p>
+      <p>Details about the bride here. Add any info you want.</p>
+    </div>
+  </section>
+
+  <!-- Page 3: Groom -->
+  <section id="groom" class="page bride-groom-section groom-section">
+    <div class="groom-details">
+      <h2>Groom</h2>
+      <p>John Smith</p>
+      <p>Details about the groom here. Add any info you want.</p>
+    </div>
+    <div class="groom-pic">
+      <img src="images/groom.png" alt="Groom" />
+    </div>
+  </section>
+
+  <!-- Page 4: RSVP -->
+  <section class="page" id="rsvp">
+    <div class="rsvp-container">
+      <h2>RSVP</h2>
+      <form id="rsvp-form">
+        <input type="text" name="name" placeholder="Name of any one of the family members" required />
+
+        <select name="attendingNum" required>
+            <option value="">How many members from your family will attend?</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+          
+
+        <select name="attendingVeg" required>
+          <option value="">Number of Vegetarians?</option>
+          <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        </select>
+
+        <select name="attendingNonVeg" required>
+          <option value="">Number of Non-Vegetarians?</option>
+          <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        </select>
+
+        <button type="submit">Submit</button>
+      </form>
+      <p id="response"></p>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
