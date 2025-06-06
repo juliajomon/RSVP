@@ -41,11 +41,20 @@ document.getElementById('rsvp-form').addEventListener('submit', function(event) 
       return;
     }
   
-    // If all good:
+    fetch('http://localhost:8080/rsvp', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ name, attendingNum, attendingVeg, attendingNonVeg })
+  })
+  .then(res => res.text())
+  .then(text => {
+    response.textContent = text;
     response.style.color = 'green';
-    response.textContent = `Thank you, ${name}! We have recorded ${attendingNum} attendees (${attendingVeg} vegetarian(s), ${attendingNonVeg} non-vegetarian(s)).`;
-  
-    // Optionally, clear form
     form.reset();
+  })
+  .catch(err => {
+    response.textContent = 'Submission failed.';
+    response.style.color = 'red';
+  });
   });
   
