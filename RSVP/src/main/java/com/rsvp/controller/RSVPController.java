@@ -1,7 +1,6 @@
 package com.rsvp.controller;
 
 
-
 import com.rsvp.model.RSVPRequest;
 
 import org.springframework.web.bind.annotation.*;
@@ -11,7 +10,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 
 @RestController
-@CrossOrigin(origins = "*") // allow JS to call from file:// or localhost
+@CrossOrigin(origins = "*") 
 public class RSVPController {
 
     @PostMapping("/rsvp")

@@ -41,7 +41,7 @@ document.getElementById('rsvp-form').addEventListener('submit', function(event) 
       return;
     }
   
-    fetch('http://localhost:8080/rsvp', {
+    fetch('http://localhost:8443/rsvp', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ name, attendingNum, attendingVeg, attendingNonVeg })
